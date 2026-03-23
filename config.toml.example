@@ -1,0 +1,28 @@
+state_file = "ssq_state.json"
+
+[email]
+smtp_host = "smtp.qq.com"
+smtp_port = 465
+username = "your_email@qq.com"
+password = "your_smtp_auth_code"
+from_addr = "your_email@qq.com"
+to_addrs = ["receiver1@example.com", "receiver2@example.com"]
+use_ssl = true
+use_starttls = false
+subject_prefix = "[双色球提醒]"
+
+[result_source]
+api_url = "https://www.cwl.gov.cn/cwl_admin/front/cwlkj/search/kjxx/findDrawNotice"
+list_url = "https://www.cwl.gov.cn/ygkj/ssq/kjgg/"
+homepage_url = "https://www.cwl.gov.cn/"
+timeout_seconds = 15
+
+[[tickets]]
+name = "自选1"
+reds = [1, 6, 11, 16, 22, 30]
+blue = 9
+
+[[tickets]]
+name = "自选2"
+reds = [3, 8, 12, 19, 27, 33]
+blue = 15
