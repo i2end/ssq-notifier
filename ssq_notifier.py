@@ -357,6 +357,8 @@ def evaluate_ticket(ticket: Ticket, draw: DrawResult) -> TicketOutcome:
         prize_level = "五等奖"
     elif blue_hit and red_hits in {0, 1, 2}:
         prize_level = "六等奖"
+    elif red_hits == 3:
+        prize_level = "福运奖"
 
     prize_name = prize_level or "未中奖"
     return TicketOutcome(
